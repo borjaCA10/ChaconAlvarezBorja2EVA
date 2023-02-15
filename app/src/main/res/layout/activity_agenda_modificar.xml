@@ -10,42 +10,41 @@
         android:id="@+id/textTiutlo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="178dp"
         android:layout_marginTop="17dp"
-        android:layout_marginEnd="175dp"
+        android:layout_marginEnd="96dp"
         android:fontFamily="monospace"
         android:text="@string/modificar_contacto"
         android:textAlignment="textStart"
         android:textSize="20sp"
         android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/guideline56"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/editTextPhone"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="67dp"
-        android:layout_marginEnd="185dp"
         android:ems="10"
         android:hint="@string/introduce_un_numero"
         android:inputType="phone"
         android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textTiutlo"
+        app:layout_constraintEnd_toStartOf="@+id/guideline60"
+        app:layout_constraintStart_toStartOf="@+id/guideline58"
+        app:layout_constraintTop_toTopOf="@+id/guideline57"
         tools:ignore="LabelFor,DuplicateSpeakableTextCheck" />
 
     <TextView
         android:id="@+id/textNume"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="73dp"
+        android:layout_marginTop="72dp"
         android:text="@string/introduce_un_numero"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/guideline57"
+        app:layout_constraintEnd_toStartOf="@+id/guideline59"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="@+id/guideline58"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -53,19 +52,91 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="31dp"
+        android:layout_marginTop="12dp"
         android:text="@string/introduce_el_nuevo_numero"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPhone" />
+        app:layout_constraintTop_toTopOf="@+id/guideline62" />
 
     <EditText
         android:id="@+id/EditNombre"
-        android:layout_width="279dp"
+        android:layout_width="0dp"
         android:layout_height="48dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:hint="Introduce el nombre nuevo"
+        android:hint="@string/introduce_el_nombre_nuevo"
         android:minHeight="48dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textNomb" />
+        app:layout_constraintEnd_toStartOf="@+id/guideline60"
+        app:layout_constraintStart_toStartOf="@+id/guideline58"
+        app:layout_constraintTop_toTopOf="@+id/guideline63" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline56"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="44dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline57"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="92dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline58"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="12dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline59"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="148dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline60"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="260dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline62"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="139dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline63"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="170dp" />
+
+    <ImageButton
+        android:id="@+id/modificarContacto"
+        android:layout_width="96dp"
+        android:layout_height="98dp"
+        android:layout_marginTop="204dp"
+        android:contentDescription="@string/agregar_contacto"
+        app:layout_constraintEnd_toStartOf="@+id/guideline59"
+        app:layout_constraintStart_toStartOf="@+id/guideline58"
+        app:layout_constraintTop_toBottomOf="@+id/EditNombre"
+        app:srcCompat="@drawable/contacto" />
+
+    <ImageButton
+        android:id="@+id/VolverAtras1"
+        android:layout_width="95dp"
+        android:layout_height="97dp"
+        android:layout_marginTop="378dp"
+        android:contentDescription="@string/Volver"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline60"
+        app:layout_constraintTop_toBottomOf="@+id/textTiutlo"
+        app:srcCompat="@drawable/atras" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

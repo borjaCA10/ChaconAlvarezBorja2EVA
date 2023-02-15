@@ -1,5 +1,6 @@
 package com.example.chaconalvarezborja2eca;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -53,6 +54,7 @@ ImageButton cerrarsesion;
                 Intent inten1 = new Intent(MenuPrincipal.this, AgendaModificar.class);
                 startActivity(inten1);
             }
+
         });
 
         cerrarsesion = findViewById(R.id.cerrarSesion);

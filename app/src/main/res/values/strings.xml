@@ -18,13 +18,15 @@
     <string name="introduce_un_numero">Introduce un Numero</string>
     <string name="borrarContacto">Borrar Contacto</string>
     <string name="agregar_contacto">Agregar Contacto</string>
-    <string name="mostrar_contancto">Mostrar Contancto</string>
+    <string name="mostrar_contancto">Mostrar Contacto</string>
     <string name="modificar_contacto">Modificar Contacto</string>
     <string name="menu_agenda">Menu Agenda</string>
     <string name="todo">TODO</string>
-    <string name="introduce_el_nuevo_numero">Introduce el nuevo numero</string>
+    <string name="introduce_el_nuevo_numero">Introduce el nuevo nombre</string>
     <string name="textview">TextView</string>
     <string name="cerrar_sesion">Cerrar Sesion</string>
     <string name="introduce_el_numero_que_desea_borrar">Introduce el numero que desea borrar</string>
+    <string name="telefono">Telefono</string>
+    <string name="introduce_el_nombre_nuevo">Introduce el nombre nuevo</string>
 
 </resources>

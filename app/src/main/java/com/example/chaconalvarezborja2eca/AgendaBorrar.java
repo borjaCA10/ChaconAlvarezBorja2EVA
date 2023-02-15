@@ -19,10 +19,11 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 public class AgendaBorrar extends AppCompatActivity {
-private DatabaseReference dbRef = FirebaseDatabase.getInstance().getReference();
-ImageButton borrarContacto;
-ImageButton volverAtras;
-EditText textoNumero;
+    private DatabaseReference dbRef = FirebaseDatabase.getInstance().getReference();
+    ImageButton borrarContacto;
+    ImageButton volverAtras;
+    EditText textoNumero;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,19 +31,18 @@ EditText textoNumero;
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         String userId = user.getUid();
         DatabaseReference userRef = FirebaseDatabase.getInstance().getReference("agenda");
-        dbRef = userRef.child("AGENDA DE: " + userId);
+        dbRef = userRef.child("AGENDA DE:  " + userId);
 
         borrarContacto = findViewById(R.id.BorrarCon);
         borrarContacto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 textoNumero = findViewById(R.id.textTelefono);
-                Contacto contacto = new Contacto();
                 Query q = dbRef.orderByChild("movil").equalTo(textoNumero.getText().toString());
-                q.addListenerForSingleValueEvent(new ValueEventListener() {
+                q.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        for (DataSnapshot ds : snapshot.getChildren()){
+                        for (DataSnapshot ds : snapshot.getChildren()) {
                             String clave = ds.getKey();
                             dbRef.child(clave).removeValue();
                         }
@@ -61,7 +61,7 @@ EditText textoNumero;
         volverAtras.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent1 = new Intent(AgendaBorrar.this,MenuPrincipal.class);
+                Intent intent1 = new Intent(AgendaBorrar.this, MenuPrincipal.class);
                 startActivity(intent1);
             }
         });
