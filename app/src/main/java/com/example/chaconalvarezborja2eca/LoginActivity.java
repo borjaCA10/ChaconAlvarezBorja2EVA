@@ -34,8 +34,8 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                    registrarse(usuario.getText().toString(), contraseña.getText().toString());
 
-                registrarse(usuario.getText().toString(), contraseña.getText().toString());
             }
         });
 
@@ -44,8 +44,8 @@ public class LoginActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                    iniciarSesion(usuario.getText().toString(), contraseña.getText().toString());
 
-                iniciarSesion(usuario.getText().toString(), contraseña.getText().toString());
             }
         });
 
@@ -54,41 +54,47 @@ public class LoginActivity extends AppCompatActivity {
 
     public void registrarse(String usuario, String contraseña) {
         contactoBase = FirebaseAuth.getInstance();
-
-        contactoBase.createUserWithEmailAndPassword(usuario, contraseña).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                if (task.isSuccessful()) {
-                    FirebaseUser user = contactoBase.getCurrentUser();
-                    Toast.makeText(LoginActivity.this, "SE HA REGISTRADO A : " + user.getUid() + "EN NUESTRA BASE DE DATOS", Toast.LENGTH_SHORT).show();
-
-                } else {
-                    if (task.getException() instanceof FirebaseAuthUserCollisionException) {
-                        Toast.makeText(LoginActivity.this,"YA EXISTE UN USUARIO CON ESE CORREO", Toast.LENGTH_SHORT).show();
+        if (usuario.equals("") || contraseña.equals("")) {
+            Toast.makeText(LoginActivity.this, "TIENE QUE RELLENAR TODOS LOS CAMPOS", Toast.LENGTH_SHORT).show();
+        } else {
+            contactoBase.createUserWithEmailAndPassword(usuario, contraseña).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task) {
+                    if (task.isSuccessful()) {
+                        FirebaseUser user = contactoBase.getCurrentUser();
+                        Toast.makeText(LoginActivity.this, "SE HA REGISTRADO A : " + user.getUid() + "EN NUESTRA BASE DE DATOS", Toast.LENGTH_SHORT).show();
 
                     } else {
-                        Toast.makeText(LoginActivity.this, "NO SE HA PODIDO REGISTRAR EN NUESTRA BASE DE DATOS, REVISE SUS DATOS ", Toast.LENGTH_SHORT).show();
+                        if (task.getException() instanceof FirebaseAuthUserCollisionException) {
+                            Toast.makeText(LoginActivity.this, "YA EXISTE UN USUARIO CON ESE CORREO", Toast.LENGTH_SHORT).show();
+
+                        } else {
+                            Toast.makeText(LoginActivity.this, "NO SE HA PODIDO REGISTRAR EN NUESTRA BASE DE DATOS, REVISE SUS DATOS ", Toast.LENGTH_SHORT).show();
+                        }
                     }
                 }
-            }
-        });
+            });
+        }
     }
 
     public void iniciarSesion(String usuario, String contraseña) {
         contactoBase = FirebaseAuth.getInstance();
-        contactoBase.signInWithEmailAndPassword(usuario, contraseña).addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                if (task.isSuccessful()) {
-                    FirebaseUser user = contactoBase.getCurrentUser();
-                    Toast.makeText(LoginActivity.this, "BIENVENIDO DE NUEVO : " + user.getUid(), Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(LoginActivity.this, MenuPrincipal.class);
-                    startActivity(intent);
-                } else {
-                    Toast.makeText(LoginActivity.this, "HA OCURRIDO UN ERROR AL INCIAR SESION, PRIEMRO DEBE REGISTRARSE ", Toast.LENGTH_SHORT).show();
+        if (usuario.equals("") || contraseña.equals("")) {
+            Toast.makeText(LoginActivity.this, "TIENE QUE RELLENAR TODOS LOS CAMPOS", Toast.LENGTH_SHORT).show();
+        } else {
+            contactoBase.signInWithEmailAndPassword(usuario, contraseña).addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task) {
+                    if (task.isSuccessful()) {
+                        FirebaseUser user = contactoBase.getCurrentUser();
+                        Toast.makeText(LoginActivity.this, "BIENVENIDO DE NUEVO : " + user.getUid(), Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(LoginActivity.this, MenuPrincipal.class);
+                        startActivity(intent);
+                    } else {
+                        Toast.makeText(LoginActivity.this, "HA OCURRIDO UN ERROR AL INCIAR SESION, PRIEMRO DEBE REGISTRARSE ", Toast.LENGTH_SHORT).show();
+                    }
                 }
-            }
-        });
+            });
+        }
     }
-
 }

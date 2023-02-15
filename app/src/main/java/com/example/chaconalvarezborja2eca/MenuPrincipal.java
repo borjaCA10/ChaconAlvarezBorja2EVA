@@ -44,5 +44,13 @@ Button modificarContacto;
                 startActivity(intenMostrar);
             }
         });
+        modificarContacto = findViewById(R.id.buttonModificar);
+        modificarContacto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent inten1 = new Intent(MenuPrincipal.this, AgendaModificar.class);
+                startActivity(inten1);
+            }
+        });
     }
 }
