@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">ChaconAlvarezBorja2Eca</string>
+    <string name="login">Login</string>
+    <string name="username">Username</string>
+    <string name="contraseña">Password</string>
+    <string name="login1">LOGIN</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="registar_usuario">Registar Usuario</string>
+    <string name="Nombre">Escriba su nombre</string>
+    <string name="Direccion"> Escriba su Direccion de casa</string>
+    <string name="Email">Escriba su email</string>
+    <string name="Movil">Escriba su número de móvil</string>
+    <string name="nombre">Nombre :</string>
+    <string name="Guardar">Guardar Contacto :</string>
+    <string name="Volver">Volver Atras :</string>
+    <string name="mis_contactos">Mis Contactos</string>
+    <string name="borrar_contacto">Borrar Contacto</string>
+    <string name="introduce_un_numero">Introduce un Numero</string>
+    <string name="borrarContacto">Borrar Contacto</string>
+    <string name="agregar_contacto">Agregar Contacto</string>
+    <string name="mostrar_contancto">Mostrar Contancto</string>
+    <string name="modificar_contacto">Modificar Contacto</string>
+    <string name="menu_agenda">Menu Agenda</string>
+    <string name="todo">TODO</string>
+
+</resources>

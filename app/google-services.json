@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "229686368613",
+    "project_id": "chaconborja2eva",
+    "storage_bucket": "chaconborja2eva.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:229686368613:android:5e8484c32b7a36fddc298c",
+        "android_client_info": {
+          "package_name": "com.example.chaconalvarezborja2eca"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "229686368613-bb80m9nbqavk17a04ohuto0n61d557dc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbTwji1aEHy82ZzwjtyKBXPANLt8MbgVA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "229686368613-bb80m9nbqavk17a04ohuto0n61d557dc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

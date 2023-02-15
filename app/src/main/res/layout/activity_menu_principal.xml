@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuPrincipal">
+
+    <Button
+        android:id="@+id/buttonAgregar"
+        android:layout_width="213dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="99dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/agregar_contacto"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toEndOf="@+id/imageVContacto"
+        app:layout_constraintTop_toBottomOf="@+id/textMenu"
+        tools:ignore="TextSizeCheck" />
+
+    <Button
+        android:id="@+id/buttonMostrar"
+        android:layout_width="213dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="64dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/mostrar_contancto"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/buttonBorrar"
+        tools:ignore="TextSizeCheck" />
+
+    <Button
+        android:id="@+id/buttonModificar"
+        android:layout_width="213dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="68dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/modificar_contacto"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toEndOf="@+id/imageView7"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMostrar"
+        tools:ignore="TextSizeCheck" />
+
+    <TextView
+        android:id="@+id/textMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="177dp"
+        android:fontFamily="monospace"
+        android:text="@string/menu_agenda"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageVContacto"
+        android:layout_width="68dp"
+        android:layout_height="76dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="132dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/contacto"
+        android:contentDescription="@string/todo" />
+
+    <ImageView
+        android:id="@+id/imageVContacto2"
+        android:layout_width="68dp"
+        android:layout_height="76dp"
+        android:layout_marginStart="328dp"
+        android:layout_marginTop="132dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/contacto" />
+
+    <Button
+        android:id="@+id/buttonBorrar"
+        android:layout_width="213dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="68dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/borrarContacto"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAgregar" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="70dp"
+        android:layout_height="78dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="44dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageVContacto"
+        app:srcCompat="@drawable/descarga" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="70dp"
+        android:layout_height="78dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="45dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintStart_toEndOf="@+id/buttonBorrar"
+        app:layout_constraintTop_toBottomOf="@+id/imageVContacto2"
+        app:srcCompat="@drawable/descarga" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="70dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="37dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:srcCompat="@drawable/lista" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="70dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="37dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintStart_toEndOf="@+id/buttonMostrar"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        app:srcCompat="@drawable/lista" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="70dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="29dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:srcCompat="@drawable/modif" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="70dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="28dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintStart_toEndOf="@+id/buttonModificar"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6"
+        app:srcCompat="@drawable/modif" />
+</androidx.constraintlayout.widget.ConstraintLayout>
