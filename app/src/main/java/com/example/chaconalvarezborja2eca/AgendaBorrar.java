@@ -3,6 +3,7 @@ package com.example.chaconalvarezborja2eca;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -20,6 +21,7 @@ import com.google.firebase.database.ValueEventListener;
 public class AgendaBorrar extends AppCompatActivity {
 private DatabaseReference dbRef = FirebaseDatabase.getInstance().getReference();
 ImageButton borrarContacto;
+ImageButton volverAtras;
 EditText textoNumero;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +54,15 @@ EditText textoNumero;
                     }
                 });
 
+            }
+        });
+
+        volverAtras = findViewById(R.id.volverAtras);
+        volverAtras.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent1 = new Intent(AgendaBorrar.this,MenuPrincipal.class);
+                startActivity(intent1);
             }
         });
     }

@@ -6,12 +6,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class MenuPrincipal extends AppCompatActivity {
 Button guardarContacto;
 Button eliminarContacto;
 Button mostrarContacto;
 Button modificarContacto;
+ImageButton cerrarsesion;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,6 +52,15 @@ Button modificarContacto;
             public void onClick(View view) {
                 Intent inten1 = new Intent(MenuPrincipal.this, AgendaModificar.class);
                 startActivity(inten1);
+            }
+        });
+
+        cerrarsesion = findViewById(R.id.cerrarSesion);
+        cerrarsesion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MenuPrincipal.this, LoginActivity.class);
+                startActivity(intent);
             }
         });
     }
