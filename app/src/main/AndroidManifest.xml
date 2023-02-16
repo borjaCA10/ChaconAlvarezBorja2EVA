@@ -25,9 +25,6 @@
             android:name=".AgendaGuardar"
             android:exported="false" />
         <activity
-            android:name=".LlamarContacto"
-            android:exported="false" />
-        <activity
             android:name=".AgendaModificar"
             android:exported="false" />
         <activity

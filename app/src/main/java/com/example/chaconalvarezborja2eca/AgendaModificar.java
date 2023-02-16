@@ -23,6 +23,9 @@ public class AgendaModificar extends AppCompatActivity {
     ImageButton Modificar;
     EditText numero;
     EditText nombre;
+    EditText email;
+
+    EditText direccion;
     private DatabaseReference dbRef = FirebaseDatabase.getInstance().getReference();
 
     @Override
@@ -33,6 +36,7 @@ public class AgendaModificar extends AppCompatActivity {
         String userId = user.getUid();
         DatabaseReference userRef = FirebaseDatabase.getInstance().getReference("agenda");
         dbRef = userRef.child("AGENDA DE:  " + userId);
+
         volverAtras = findViewById(R.id.VolverAtras1);
         volverAtras.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,6 +52,8 @@ public class AgendaModificar extends AppCompatActivity {
             public void onClick(View v) {
                 numero = findViewById(R.id.editTextPhone);
                 nombre = findViewById(R.id.EditNombre);
+                direccion = findViewById(R.id.editDireccion);
+                email = findViewById(R.id.EditMail);
 
                 Query q = dbRef.orderByChild("movil").equalTo(numero.getText().toString());
                 q.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -56,6 +62,9 @@ public class AgendaModificar extends AppCompatActivity {
                         for(DataSnapshot ds : snapshot.getChildren()){
                             String clave = ds.getKey();
                             dbRef.child(clave).child("nombre").setValue(nombre.getText().toString());
+                            dbRef.child(clave).child("direccion").setValue(direccion.getText().toString());
+                            dbRef.child(clave).child("email").setValue(email.getText().toString());
+
                         }
                     }
 

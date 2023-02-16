@@ -1,10 +1,13 @@
 package com.example.chaconalvarezborja2eca;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -23,6 +26,7 @@ public class AgendaBorrar extends AppCompatActivity {
     ImageButton borrarContacto;
     ImageButton volverAtras;
     EditText textoNumero;
+    String clave;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,14 +42,18 @@ public class AgendaBorrar extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 textoNumero = findViewById(R.id.textTelefono);
+
                 Query q = dbRef.orderByChild("movil").equalTo(textoNumero.getText().toString());
                 q.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
+
                         for (DataSnapshot ds : snapshot.getChildren()) {
-                            String clave = ds.getKey();
+                            clave = ds.getKey();
                             dbRef.child(clave).removeValue();
                         }
+
+                        finish();
                     }
 
                     @Override

@@ -57,6 +57,27 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline62" />
 
+    <TextView
+        android:id="@+id/textDire1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/introduce_la_nueva_direccion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline61" />
+
+    <TextView
+        android:id="@+id/textCorreo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="68dp"
+        android:text="@string/introduce_el_nuevo_correo"
+        app:layout_constraintEnd_toStartOf="@+id/guideline60"
+        app:layout_constraintHorizontal_bias="0.157"
+        app:layout_constraintStart_toStartOf="@+id/guideline58"
+        app:layout_constraintTop_toTopOf="@+id/guideline66" />
+
     <EditText
         android:id="@+id/EditNombre"
         android:layout_width="0dp"
@@ -66,6 +87,28 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline60"
         app:layout_constraintStart_toStartOf="@+id/guideline58"
         app:layout_constraintTop_toTopOf="@+id/guideline63" />
+
+    <EditText
+        android:id="@+id/editDireccion"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:hint="@string/introduce_la_direccion_nueva"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline60"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline58"
+        app:layout_constraintTop_toTopOf="@+id/guideline64" />
+
+    <EditText
+        android:id="@+id/EditMail"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:hint="@string/introduce_el_email_nuevo"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline60"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline58"
+        app:layout_constraintTop_toTopOf="@+id/guideline67" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline56"
@@ -120,23 +163,58 @@
         android:id="@+id/modificarContacto"
         android:layout_width="96dp"
         android:layout_height="98dp"
-        android:layout_marginTop="204dp"
         android:contentDescription="@string/agregar_contacto"
         app:layout_constraintEnd_toStartOf="@+id/guideline59"
+        app:layout_constraintHorizontal_bias="0.575"
         app:layout_constraintStart_toStartOf="@+id/guideline58"
-        app:layout_constraintTop_toBottomOf="@+id/EditNombre"
+        app:layout_constraintTop_toTopOf="@+id/guideline68"
         app:srcCompat="@drawable/contacto" />
 
     <ImageButton
         android:id="@+id/VolverAtras1"
         android:layout_width="95dp"
         android:layout_height="97dp"
-        android:layout_marginTop="378dp"
         android:contentDescription="@string/Volver"
         android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.285"
         app:layout_constraintStart_toStartOf="@+id/guideline60"
-        app:layout_constraintTop_toBottomOf="@+id/textTiutlo"
+        app:layout_constraintTop_toTopOf="@+id/guideline68"
         app:srcCompat="@drawable/atras" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline61"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="219dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline64"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="249dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline66"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="312dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline67"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="333dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline68"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="436dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

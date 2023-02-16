@@ -28,5 +28,9 @@
     <string name="introduce_el_numero_que_desea_borrar">Introduce el numero que desea borrar</string>
     <string name="telefono">Telefono</string>
     <string name="introduce_el_nombre_nuevo">Introduce el nombre nuevo</string>
+    <string name="introduce_la_nueva_direccion">Introduce la nueva direccion</string>
+    <string name="introduce_la_direccion_nueva">Introduce la direccion Nueva</string>
+    <string name="introduce_el_nuevo_correo">Introduce el nuevo Correo</string>
+    <string name="introduce_el_email_nuevo">Introduce el email Nuevo</string>
 
 </resources>

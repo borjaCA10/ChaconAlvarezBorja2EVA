@@ -1,6 +1,8 @@
 package com.example.chaconalvarezborja2eca;
 
-public class Contacto {
+import java.io.Serializable;
+
+public class Contacto implements Serializable {
     public String nombre;
     public String direccion;
     public String email;

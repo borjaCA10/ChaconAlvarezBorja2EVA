@@ -25,10 +25,12 @@ import java.util.ArrayList;
 public class AgendaListado extends AppCompatActivity {
     private DatabaseReference dbRef = FirebaseDatabase.getInstance().getReference();
     ListView listado;
+    Contacto contacto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_agenda_listado);
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         String userId = user.getUid();
@@ -36,9 +38,10 @@ public class AgendaListado extends AppCompatActivity {
         dbRef = userRef.child("AGENDA DE:  " + userId);
         listado = findViewById(R.id.listadoContactos);
         dbRef.addListenerForSingleValueEvent(new ValueEventListener() {
+
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                Contacto contacto;
+
                 ArrayAdapter<String> adapter;
                 ArrayList<String> listadoContactos = new ArrayList<String>();
                 for (DataSnapshot dp : snapshot.getChildren()) {
