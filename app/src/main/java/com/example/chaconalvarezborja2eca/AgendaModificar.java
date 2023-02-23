@@ -24,6 +24,7 @@ public class AgendaModificar extends AppCompatActivity {
     EditText numero;
     EditText nombre;
     EditText email;
+    EditText alias;
 
     EditText direccion;
     private DatabaseReference dbRef = FirebaseDatabase.getInstance().getReference();
@@ -54,7 +55,7 @@ public class AgendaModificar extends AppCompatActivity {
                 nombre = findViewById(R.id.EditNombre);
                 direccion = findViewById(R.id.editDireccion);
                 email = findViewById(R.id.EditMail);
-
+                alias = findViewById(R.id.editAlias);
                 Query q = dbRef.orderByChild("movil").equalTo(numero.getText().toString());
                 q.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
@@ -64,8 +65,10 @@ public class AgendaModificar extends AppCompatActivity {
                             dbRef.child(clave).child("nombre").setValue(nombre.getText().toString());
                             dbRef.child(clave).child("direccion").setValue(direccion.getText().toString());
                             dbRef.child(clave).child("email").setValue(email.getText().toString());
+                            dbRef.child(clave).child("alias").setValue(alias.getText().toString());
 
                         }
+                        finish();
                     }
 
                     @Override

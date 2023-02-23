@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceCategory android:title="Nota">
+<EditTextPreference
+    android:key = "titulo"
+    android:title="Titulo de la Nota"
+    android:summary="Introduzca el titulo de la nota"/>
+    <EditTextPreference
+        android:key = "Nota"
+        android:title="Nota"
+        android:summary="@string/g"/>
+
+
+</PreferenceCategory>
+</PreferenceScreen>

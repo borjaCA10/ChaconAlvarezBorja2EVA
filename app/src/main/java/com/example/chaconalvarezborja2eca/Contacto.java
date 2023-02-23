@@ -8,12 +8,15 @@ public class Contacto implements Serializable {
     public String email;
     public String movil;
 
+    public String alias;
 
-    Contacto(String nombre, String direccion, String email, String movil) {
+
+    Contacto(String nombre, String direccion, String email, String movil, String alias) {
         this.nombre = nombre;
         this.direccion = direccion;
         this.email = email;
         this.movil = movil;
+        this.alias = alias;
     }
 
     public Contacto() {

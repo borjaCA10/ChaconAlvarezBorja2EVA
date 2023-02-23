@@ -7,6 +7,48 @@
     android:layout_height="match_parent"
     tools:context=".AgendaGuardar">
 
+    <EditText
+        android:id="@+id/textMovil2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/Movil"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline44"
+        app:layout_constraintEnd_toStartOf="@+id/guideline30"
+        app:layout_constraintHorizontal_bias="0.375"
+        app:layout_constraintStart_toStartOf="@+id/guideline21"
+        app:layout_constraintTop_toTopOf="@+id/guideline43" />
+
+    <EditText
+        android:id="@+id/textAlias1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="87dp"
+        android:layout_marginEnd="96dp"
+        android:layout_marginBottom="152dp"
+        android:hint="@string/introduce_tu_alias"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/VolverAtras"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textMov"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:text="@string/movil"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/guideline43"
+        app:layout_constraintEnd_toStartOf="@+id/guideline21"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline29"
+        app:layout_constraintTop_toTopOf="@+id/guideline40"
+        app:layout_constraintVertical_bias="0.0" />
+
     <TextView
         android:id="@+id/textTitulo"
         android:layout_width="wrap_content"
@@ -44,7 +86,7 @@
         android:layout_height="0dp"
         android:layout_marginTop="8dp"
         android:fontFamily="sans-serif-condensed"
-        android:text="Direccion :"
+        android:text="@string/direccion"
         android:textAlignment="center"
         android:textSize="16sp"
         android:textStyle="bold|italic"
@@ -60,7 +102,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-condensed"
-        android:text="Email :"
+        android:text="@string/email"
         android:textAlignment="center"
         android:textSize="16sp"
         android:textStyle="bold|italic"
@@ -70,18 +112,22 @@
         app:layout_constraintTop_toTopOf="@+id/guideline36" />
 
     <TextView
-        android:id="@+id/textMov"
+        android:id="@+id/textAlias"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="137dp"
+        android:layout_marginEnd="335dp"
+        android:layout_marginBottom="208dp"
         android:fontFamily="sans-serif-condensed"
-        android:text="Movil :"
+        android:text="@string/alias"
         android:textAlignment="center"
         android:textSize="16sp"
         android:textStyle="bold|italic"
-        app:layout_constraintBottom_toTopOf="@+id/guideline43"
-        app:layout_constraintEnd_toStartOf="@+id/guideline21"
-        app:layout_constraintStart_toStartOf="@+id/guideline29"
-        app:layout_constraintTop_toTopOf="@+id/guideline40" />
+        app:layout_constraintBottom_toTopOf="@+id/GuardadContacto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textEm" />
 
     <EditText
         android:id="@+id/textNombre"
@@ -117,18 +163,6 @@
         app:layout_constraintStart_toStartOf="@+id/guideline21"
         app:layout_constraintTop_toTopOf="@+id/guideline37"
         app:layout_constraintVertical_bias="0.0" />
-
-    <EditText
-        android:id="@+id/textMovil"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="@string/Movil"
-        android:minHeight="48dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline44"
-        app:layout_constraintEnd_toStartOf="@+id/guideline30"
-        app:layout_constraintHorizontal_bias="0.375"
-        app:layout_constraintStart_toStartOf="@+id/guideline21"
-        app:layout_constraintTop_toTopOf="@+id/guideline43" />
 
     <ImageButton
         android:id="@+id/GuardadContacto"
@@ -279,5 +313,28 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_begin="292dp" />
+
+    <Button
+        android:id="@+id/nota"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="149dp"
+        android:layout_marginEnd="174dp"
+        android:layout_marginBottom="208dp"
+        android:text="@string/nota"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/VerNota"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="149dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/vernota"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nota" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

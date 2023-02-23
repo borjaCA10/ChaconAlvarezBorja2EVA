@@ -110,6 +110,18 @@
         app:layout_constraintStart_toStartOf="@+id/guideline58"
         app:layout_constraintTop_toTopOf="@+id/guideline67" />
 
+    <EditText
+        android:id="@+id/editAlias"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="84dp"
+        android:hint="introduce el alias nuevo"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline60"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline58"
+        app:layout_constraintTop_toTopOf="@+id/guideline67" />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline56"
         android:layout_width="wrap_content"
@@ -163,9 +175,10 @@
         android:id="@+id/modificarContacto"
         android:layout_width="96dp"
         android:layout_height="98dp"
+        android:layout_marginTop="104dp"
         android:contentDescription="@string/agregar_contacto"
         app:layout_constraintEnd_toStartOf="@+id/guideline59"
-        app:layout_constraintHorizontal_bias="0.575"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline58"
         app:layout_constraintTop_toTopOf="@+id/guideline68"
         app:srcCompat="@drawable/contacto" />
@@ -174,10 +187,11 @@
         android:id="@+id/VolverAtras1"
         android:layout_width="95dp"
         android:layout_height="97dp"
+        android:layout_marginTop="104dp"
         android:contentDescription="@string/Volver"
         android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.285"
+        app:layout_constraintHorizontal_bias="0.267"
         app:layout_constraintStart_toStartOf="@+id/guideline60"
         app:layout_constraintTop_toTopOf="@+id/guideline68"
         app:srcCompat="@drawable/atras" />
@@ -216,5 +230,14 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="436dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="244dp"
+        android:text="Introduce el nuevo alias"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EditMail" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

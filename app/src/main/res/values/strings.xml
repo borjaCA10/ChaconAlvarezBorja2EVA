@@ -32,5 +32,28 @@
     <string name="introduce_la_direccion_nueva">Introduce la direccion Nueva</string>
     <string name="introduce_el_nuevo_correo">Introduce el nuevo Correo</string>
     <string name="introduce_el_email_nuevo">Introduce el email Nuevo</string>
+    <string name="introduce_tu_alias">introduce tu alias</string>
+    <string name="alias">Alias</string>
+    <string name="movil">Movil :</string>
+    <string name="direccion">Direccion :</string>
+    <string name="email">Email :</string>
+    <string name="nota">Nota</string>
+    <string name="vernota">VerNota</string>
+    <string name="g">Introduzca la nota</string>
+    <string name="title_activity_notas">Notas</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="guardar_nota">Guardar Nota</string>
+    <string name="ver_nota">Ver Nota</string>
+    <string name="titulo_nota">Titulo Nota</string>
+    <string name="texttitulo">textTitulo</string>
+    <string name="contenido_nota">Contenido Nota</string>
+    <string name="escriba_el_contenido">Escriba el contenido</string>
 
 </resources>
